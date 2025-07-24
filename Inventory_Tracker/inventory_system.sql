@@ -15,4 +15,23 @@ CREATE TABLE product (
     warehouse_id INT,           -- Foreign key to warehouse table
     FOREIGN KEY (warehouse_id) REFERENCES warehouse(warehouse_id)
 );
-
+CREATE TABLE inventory (
+    product_id INT,
+    warehouse_id INT,
+    quantity INT,
+    PRIMARY KEY (product_id, warehouse_id),
+    FOREIGN KEY (product_id) REFERENCES product(product_id),
+    FOREIGN KEY (warehouse_id) REFERENCES warehouse(warehouse_id)
+    );
+CREATE TABLE transaction_table (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    name VARCHAR(100),
+    price FLOAT,
+    transaction_type VARCHAR(10), -- 'ADD', 'DELETE', 'UPDATE'
+    quantity INT,
+    warehouse_id INT,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES product(product_id),
+    FOREIGN KEY (warehouse_id) REFERENCES warehouse(warehouse_id)
+);
