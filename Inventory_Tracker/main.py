@@ -1,6 +1,6 @@
 from class_file.products import Products
 from class_file.warehouse import Warehouse
-from inventory_operations.operations import add_product, show_products, update_product_quantity, delete_product,add_warehouse
+from inventory_operations.operations import add_product, show_products, update_product_quantity, delete_product,add_warehouse, show_transactions, show_inventory
 
 print("------Welcome to the Inventory Tracker System------")
 print("1. Add Product")
@@ -8,7 +8,10 @@ print("2. Show Products")
 print("3. Update Product Quantity")
 print("4. Delete Product")
 print("5. add Warehouse")
-print("6. Exit")
+print("6. show transactions")
+print("7. inventory")
+print("8. Exit")
+
 choice = input("Enter your choice (1-4): ")
 if choice == '1':
     Products.product_id=int(input("Enter Product ID: "))
@@ -35,11 +38,14 @@ elif choice == '5':
     warehouse_id = int(input("Enter Warehouse ID: "))
     location = input("Enter Warehouse Location: ")
     capacity = int(input("Enter Warehouse Capacity: "))
-
     warehouse = Warehouse(warehouse_id, location, capacity)
     result = add_warehouse(warehouse)
     print("Warehouse added successfully")
 elif choice == '6':
+    show_transactions()
+elif choice == '7':
+    show_inventory()
+elif choice == '8':
     print("Exiting the Inventory Tracker System. Goodbye!")
 
 else:
