@@ -1,0 +1,10 @@
+# Ignore all CSV files
+*.csv
+fraudTest.csv
+fraudTrain.csv
+train_preprocessed.csv
+test_preprocessed.csv
+cleaned_train_data.csv
+cleaned_test_data.csv
+
+
