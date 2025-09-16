@@ -1,0 +1,5 @@
+raw_data_input_path = r"C:\Github Projects\SculpSoft_Projects\Heart Attack Prediction\data\raw\heart_attack_prediction_dataset.csv"
+clean_data_output_path = r"C:\Github Projects\SculpSoft_Projects\Heart Attack Prediction\data\clean\cleaned_data.csv"
+input_path_processed_data= r"C:\Github Projects\SculpSoft_Projects\Heart Attack Prediction\data\processed\processed.csv"
+model_output_path = r"C:\Github Projects\SculpSoft_Projects\Heart Attack Prediction\models\heart_attack_model.pkl"
+TARGET_COL = "Heart Attack Risk"
