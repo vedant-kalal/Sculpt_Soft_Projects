@@ -75,6 +75,8 @@ def train_and_evaluate(Pipelines, X, y):
     report = classification_report(y_test, y_pred)
     print(f"Accuracy: {accuracy}")
     print(f"Classification Report: {report}")
+    return X_train, X_test, y_train, y_test
+    
 
 
 def save_pipeline(Pipelines):
