@@ -1,0 +1,6 @@
+# Ignore dataset/cache/checkpoint folders for PyTorch examples
+/data/
+/data/**
+*.pth
+*.pt
+__pycache__/
